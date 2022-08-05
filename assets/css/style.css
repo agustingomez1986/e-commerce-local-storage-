@@ -1,0 +1,15 @@
+body{
+    background-color: #F5F5F5;
+    font-family: 'Raleway';
+}
+
+.rodapie{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+::placeholder{
+    color: #a2a2a2;
+}

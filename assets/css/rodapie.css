@@ -1,0 +1,36 @@
+.rodapie__principal{
+    background-color: #EAF2FD;
+    display: flex;
+    justify-content: space-between;
+    padding: 64px 10vw;
+    width: 100%;
+}
+
+.rodapie__links__item{
+    color: #464646;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 24px;
+}
+.rodapie__links__item:last-child{
+    margin-bottom: 0;
+}
+
+.rodapie__formulario{
+    width: 50%;
+}
+
+.rodapie__desarrollador{
+    background-color: #ffffff;
+    padding: 32px;
+    width: 100%;
+}
+
+.rodapie__desarrollador__titulo{
+    color: #464646;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alura Geek - Editar producto</title>
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- FUENTE RELAWAY -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/banner.css">
+    <link rel="stylesheet" href="assets/css/botones.css">
+    <link rel="stylesheet" href="assets/css/contenido.css">
+    <link rel="stylesheet" href="assets/css/encabezado.css">
+    <link rel="stylesheet" href="assets/css/formularios.css">    
+    <link rel="stylesheet" href="assets/css/rodapie.css">
+    <link rel="stylesheet" href="assets/css/verDescripcion.css">
+
+</head>
+<body>
+    <header class="encabezado">
+        <section class="encabezado__principal">
+            <div class="principal__box">
+                <img class="encabezado__logo" src="assets/img/Logo.png">
+                <div class="encabezado__buscador">
+                    <input class="encabezado__input" type="search" placeholder="¿Que deseas buscar?">
+                    <img class="encabezado__searchIcon" src="assets/img/search_icon.png" alt="Icono de lupa">
+                </div>
+            </div>
+        </section>
+    </header>
+    <main class="contenido">
+        <form class="formulario__agregarProducto" data-formEditarProducto>
+            <legend class="formulario__titulo formulario__titulo--h2">Editar producto</legend>
+            <div class="formulario__box">
+                <input class="input" id="imagenProducto" type="file" name="imagenProducto" placeholder="URL de imagen" required data-tipo="imagenProducto">
+                <label class="etiqueta" for="imagenProducto">URL de imagen</label>
+                <span class="input__error"></span>
+            </div>
+            <div class="formulario__box">
+                <input class="input" id="categoriaProducto" type="text" name="categoriaProducto" placeholder="Categoría" maxlength="20" pattern="^([A-ZÑÇÁÉÍÓÚÜa-zñçáéíóúü0-9_\s]*)([A-ZÑÇÁÉÍÓÚÜa-zñçáéíóúü0-9_]+)(\s*){1,20}" required data-tipo="categoriaProducto">
+                <label class="etiqueta" for="categoriaProducto">Categoría</label>
+                <span class="input__error"></span>
+            </div>
+            <div class="formulario__box">
+                <input class="input" id="nombreProducto" type="text" name="nombreProducto" placeholder="Nombre del producto" maxlength="20" pattern="^([A-ZÑÇÁÉÍÓÚÜa-zñçáéíóúü0-9_\s]*)([A-ZÑÇÁÉÍÓÚÜa-zñçáéíóúü0-9_]+)(\s*){1,20}"required data-tipo="nombreProducto">
+                <label class="etiqueta" for="nombreProducto">Nombre del producto</label>
+                <span class="input__error"></span>
+            </div>
+            <div class="formulario__box">
+                <input class="input" id="precioProducto" type="text" name="precioProducto" placeholder="Precio del producto" pattern="([0-9]+)([.][0-9]{1,2})?" required data-tipo="precioProducto">
+                <label class="etiqueta" for="precioProducto">Precio del producto</label>
+                <span class="input__error"></span>
+            </div>
+            <div class="textarea__box">
+                <textarea class="textarea" id="descripcionProducto" name="descripcionProducto" placeholder="Descripción del producto" maxlength="150" required data-tipo="descripcionProducto"></textarea>
+                <label class="etiqueta" for="descripcionProducto">Descripción del producto</label>
+                <span class="textarea__error"></span>
+            </div>
+            <button class="boton" type="submit">Guardar</button>
+        </form>
+
+    </main>
+    <footer class="rodapie">
+        <section class="rodapie__principal">
+            <div>
+                <img class="rodapie__logo" src="assets/img/Logo.png">
+            </div>
+            <ul class="rodapie__links">
+                    <li class="rodapie__links__item"><a href="">Quienes somos</a></li>
+                    <li class="rodapie__links__item"><a href="">Política de privacidad</a></li>
+                    <li class="rodapie__links__item"><a href="">Programa de fidelidad</a></li>
+                    <li class="rodapie__links__item"><a href="">Nuestras tiendas</a></li>
+                    <li class="rodapie__links__item"><a href="">Quiero ser franquiciado</a></li>
+                    <li class="rodapie__links__item"><a href="">Anuncie aquí</a></li>
+            </ul>
+            <form class="rodapie__formulario">
+                <fieldset class="rodapie__fieldset">
+                    <legend class="formulario__titulo">Contactenos</legend>
+                    <div class="formulario__box">
+                        <input class="input" type="text" name="nombre" placeholder="Nombre" maxlength="40" pattern="^([A-ZÑÇÁÉÍÓÚÜa-zñçáéíóúü\s]*)([A-ZÑÇÁÉÍÓÚÜa-zñçáéíóúü]+)(\s*){1,40}" title="El nombre solo debe contener letras" required data-tipo="nombreContacto">
+                        <label class="etiqueta" for="nombre">Nombre</label>
+                        <span class="input__error">aca hay un mensaje</span>
+                    </div>
+                    <div class="textarea__box">
+                        <textarea class="textarea" name="mensaje" placeholder="Escribe tu mensaje" maxlength="120" required data-tipo="mensajeContacto"></textarea>
+                        <label class="etiqueta" for="mensaje">Mensaje</label>
+                        <span class="textarea__error"></span>
+                    </div>
+                    <button class="boton">Enviar mensaje</button>    
+                </fieldset>
+            </form>
+        </section>
+        <section class="rodapie__desarrollador">
+            <h6 class="rodapie__desarrollador__titulo">Desarrollado por Agustín Gomez - 2022</h6>
+        </section>
+    </footer>
+    <script src="js/validacionesFormulario.js"></script>
+    <script type="module" src="js/editarProducto.js"></script>
+</body>
+</html>

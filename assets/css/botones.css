@@ -1,0 +1,60 @@
+.boton{
+    background-color: #2A7AE4;
+    border: none;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    padding: 16px;
+}
+.boton:focus{
+    outline: none;
+}
+.boton:active{
+    animation: dissolve 300ms;
+}
+
+.boton--login{
+    background-color: transparent;
+    border: 1px solid #2A7AE4;
+    color: #2A7AE4;
+    width: 180px;
+}
+
+@keyframes dissolve{
+    from{opacity: 100%}
+    to{opacity: 0%}
+}
+
+.contenido__categoria__boton{
+    background-color: transparent;
+    border: none;
+    color: #2A7AE4;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 0;
+
+
+}
+
+/*--- BOTONES DE CADA ITEM QUE VE EL ADMINISTRADOR ---*/
+.contenido__producto__boton{
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    position: absolute;
+    top: 4px;
+}
+.contenido__producto__boton:hover{
+    transform: scale(1.2);
+}
+.contenido__producto__boton:focus{
+    outline: none;
+}
+
+.contenido__producto__boton--trash{
+    right: 32px;
+}
+.contenido__producto__boton--edit{
+    right: 4px;
+}

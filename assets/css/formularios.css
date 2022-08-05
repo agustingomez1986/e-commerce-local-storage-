@@ -1,0 +1,100 @@
+.formulario__boxLogin{
+    display: flex;
+    flex-direction: column;
+    margin: 90px 0;
+    width: 420px;
+}
+
+.formulario__agregarProducto{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 64px;
+    margin-top: 30px;
+    width: 560px;
+}
+
+.formulario__titulo{
+    color: #464646;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 8px;
+}
+
+.formulario__titulo--h2{
+    font-size: 32px;
+    line-height: 38px;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.formulario__box, .textarea__box{
+    position: relative;
+}
+
+.input, .textarea{
+    background-color: #ffffff;
+    border: none;
+    border-bottom: 1px solid #C8C8C8;
+    border-radius: 4px;
+    color: #464646;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 32px;
+    padding: 20px 10px 10px;
+    width: 100%;
+}
+.input{
+    height: 50px;
+}
+.textarea{
+    height: 82px;
+}
+
+.input:focus, .textarea:focus{
+    outline: none;
+}
+
+.input::placeholder, .textarea::placeholder{
+    visibility: hidden;
+}
+
+.etiqueta{
+    color: #a2a2a2;
+    left: 10px;
+    position: absolute;
+    top: 20px;
+    transition: all 0.25s;
+}
+
+.input:not(:placeholder-shown) + .etiqueta,
+.input:focus + .etiqueta,
+.textarea:not(:placeholder-shown) + .etiqueta,
+.textarea:focus + .etiqueta{
+  font-size: 12px;
+  top: 0.25rem;
+  transition: all 0.25s;
+}
+
+.input__error, .textarea__error{
+    display: none;
+}
+
+.formulario__box--incorrecto .input, .textarea__box--incorrecto .textarea{
+    border: 1px solid red;
+    border-radius: 7px;
+    margin-bottom: 0px;
+}
+
+.formulario__box--incorrecto .input__error, .textarea__box--incorrecto .textarea__error{
+    color: red;
+    display: block;
+    margin-bottom: 14px;
+    margin-top: 0px;
+    padding-left: 5px;
+}
+
+.formulario__box--incorrecto .etiqueta, .textarea__box--incorrecto .etiqueta{
+    color: red;
+}

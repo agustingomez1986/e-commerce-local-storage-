@@ -1,0 +1,44 @@
+.encabezado{
+    align-items: center;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+}
+
+.encabezado__principal{
+    display: flex;
+    justify-content: space-between;
+    padding: 32px 0;
+    width: 80%;
+}
+
+.principal__box{
+    align-items: center;
+    display: flex;
+    gap: 32px;
+    width: 60%;
+}
+
+.encabezado__buscador{
+    position: relative;
+    width: 60%;
+}
+
+.encabezado__input{
+    background-color: #F5F5F5;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    height: 40px;
+    padding: 8px 16px;
+    width: 100%;
+}
+.encabezado__input:focus{
+    outline: none;
+}
+
+.encabezado__searchIcon{
+    position: absolute;
+    right: 32px;
+    top: 8px;
+}

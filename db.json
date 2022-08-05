@@ -1,14 +1,6 @@
 {
   "productos": [
     {
-      "imagenProducto": "./assets/img/consolas_nintendojoystick.png",
-      "categoriaProducto": "Consolas",
-      "nombreProducto": "Joyyystick",
-      "precioProducto": "10",
-      "descripcionProducto": "Joystick Nintendo",
-      "id": "d9f97fd0-e00c-436c-943c-811290788f04"
-    },
-    {
       "imagenProducto": "./assets/img/consolas_playstation.png",
       "categoriaProducto": "Consolas",
       "nombreProducto": "PlayStation 5",

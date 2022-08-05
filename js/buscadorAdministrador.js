@@ -26,7 +26,7 @@ const buscador = ()=>{
                datos.forEach((dato)=>{
                   var expresion = new RegExp(this.value, "i");
                   if(expresion.test(dato.nombreProducto)){
-                     const nuevoProducto = crearProductoAdministrador(dato.imagenProducto, dato.nombreProducto, dato.precioProducto, dato.id);
+                     const nuevoProducto = crearProductoAdministrador(dato.imagenProducto, dato.categoriaProducto, dato.nombreProducto, dato.precioProducto, dato.descripcionProducto, dato.id);
                      const categoria = "buscador"
                      const categoriaData = "[data-categorias= \""+categoria+"\"]";
                      const listaCategorias = document.querySelector(categoriaData);

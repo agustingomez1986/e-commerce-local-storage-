@@ -1,6 +1,7 @@
 import { verProducto } from "../botones/verProducto.js";
 
 export const crearProductoUsuario = (imagenProducto, nombreProducto, precioProducto, id, solo6)=>{
+   
    const producto = document.createElement("li");
    
    producto.classList.add("contenido__categoria__producto");
@@ -11,7 +12,7 @@ export const crearProductoUsuario = (imagenProducto, nombreProducto, precioProdu
    
    const imagen = document.createElement("img");
    imagen.classList.add("contenido__producto__img");
-   imagen.src = imagenProducto;
+   imagen.src = "data:image/png;base64," + imagenProducto;
    producto.appendChild(imagen);
 
    const titulo = document.createElement("h4");

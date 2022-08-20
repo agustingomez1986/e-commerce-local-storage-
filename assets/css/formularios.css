@@ -98,3 +98,10 @@
 .formulario__box--incorrecto .etiqueta, .textarea__box--incorrecto .etiqueta{
     color: red;
 }
+
+.vistaPreviaImagenProducto{
+    background-color: #464646;
+    height: 170px;
+    margin-bottom: 32px;
+    width: 170px;
+}

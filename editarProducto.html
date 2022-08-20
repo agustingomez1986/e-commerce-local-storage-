@@ -39,9 +39,12 @@
         <form class="formulario__agregarProducto" data-formEditarProducto>
             <legend class="formulario__titulo formulario__titulo--h2">Editar producto</legend>
             <div class="formulario__box">
-                <input class="input" id="imagenProducto" type="file" name="imagenProducto" placeholder="URL de imagen" required data-tipo="imagenProducto">
+                <input class="input" id="imagenProducto" type="file" onchange="readURL(this);" name="imagenProducto" placeholder="URL de imagen" required data-tipo="imagenProducto">
                 <label class="etiqueta" for="imagenProducto">URL de imagen</label>
                 <span class="input__error"></span>
+            </div>
+            <div>
+                <img src="" class="vistaPreviaImagenProducto" id="vistaPreviaImagenProducto" alt="">
             </div>
             <div class="formulario__box">
                 <input class="input" id="categoriaProducto" type="text" name="categoriaProducto" placeholder="Categoría" maxlength="20" pattern="^([A-ZÑÇÁÉÍÓÚÜa-zñçáéíóúü0-9_\s]*)([A-ZÑÇÁÉÍÓÚÜa-zñçáéíóúü0-9_]+)(\s*){1,20}" required data-tipo="categoriaProducto">
@@ -103,5 +106,6 @@
     </footer>
     <script src="js/validacionesFormulario.js"></script>
     <script type="module" src="js/editarProducto.js"></script>
+    <script src="js/Servicios/crearImagen.js"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-import { serviciosCRUD } from "../servicios/serviciosCRUD.js";
+import { serviciosLocalStorage } from "../servicios/serviciosLocalStorage.js";
 import { mostrarVentanaDescripcion } from "../verProductoVentana.js";
 
 export const verProducto = (id)=>{
@@ -6,15 +6,9 @@ export const verProducto = (id)=>{
    botonVerProducto.classList.add("contenido__producto__descripcion");
    botonVerProducto.innerHTML = "Ver producto";
    botonVerProducto.addEventListener("click", ()=>{
-      serviciosCRUD
-         .datoProducto(id)
-         .then((datos)=>{
-            mostrarVentanaDescripcion(datos);
-      }).catch((error) => alert("Error ver producto"));
-   })
+      const datos = serviciosLocalStorage.datoProducto(id);
+      mostrarVentanaDescripcion(datos);
+   });
    
    return botonVerProducto;
 }
-
-
-

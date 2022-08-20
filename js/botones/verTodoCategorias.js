@@ -1,4 +1,4 @@
-import { serviciosCRUD } from "../Servicios/serviciosCRUD.js";
+import { serviciosLocalStorage } from "../Servicios/serviciosLocalStorage.js";
 import { crearTituloCategoria } from "../Servicios/crearTituloCategoria.js";
 import { crearProductoUsuario } from "../Servicios/crearProductoUsuario.js";
 
@@ -19,19 +19,16 @@ export const verTodo = (categoriaSeleccionada)=>{
       }
       
       //BUSCO Y AGREGO PRODUCTOS
-      serviciosCRUD
-         .listaProductos()
-         .then((datos)=>{
-            const tituloCategoria = crearTituloCategoria(categoriaSeleccionada, "index");
-            listaProductos.appendChild(tituloCategoria)
-            datos.forEach((dato)=>{
-               if(dato.categoriaProducto == categoriaSeleccionada){
-                  const lis = document.querySelector("[data-categorias]");
-                  const nuevoProducto = crearProductoUsuario(dato.imagenProducto, dato.nombreProducto, dato.precioProducto, false);
-                  lis.appendChild(nuevoProducto);
-               }
-            })
-      }).catch((error) => alert("Error ver todo categorias"));
+      const datos = serviciosLocalStorage.listaProductos();
+      const tituloCategoria = crearTituloCategoria(categoriaSeleccionada, "index");
+      listaProductos.appendChild(tituloCategoria)
+      datos.forEach((dato)=>{
+         if(dato.categoriaProducto == categoriaSeleccionada){
+         const lis = document.querySelector("[data-categorias]");
+            const nuevoProducto = crearProductoUsuario(dato.imagenProducto, dato.nombreProducto, dato.precioProducto, dato.id, false);
+            lis.appendChild(nuevoProducto);
+         }
+      })
    });
    return botonVerTodo;
 }

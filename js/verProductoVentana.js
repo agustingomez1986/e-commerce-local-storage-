@@ -31,7 +31,7 @@ export const mostrarVentanaDescripcion = (datos)=>{
 
    const imagen = document.createElement("img");
    imagen.classList.add("contenido__descripcion__imagen");
-   imagen.src = datos.imagenProducto;
+   imagen.src = "data:image/png;base64," + datos.imagenProducto;
    divImagen.appendChild(imagen);
 
    const textoBox = document.createElement("div");
@@ -54,7 +54,4 @@ export const mostrarVentanaDescripcion = (datos)=>{
    textoBox.appendChild(descripcion);
 
    seccionDescripcion.appendChild(cerrarDescripcion(seccionDescripcion));
-
-
-   return contenedor;
 }

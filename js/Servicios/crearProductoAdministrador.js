@@ -1,10 +1,12 @@
-import { serviciosCRUD } from "./serviciosCRUD.js";
+import { mostrarProductosAdministrador } from "../productoAdministrador-controller.js";
+import { serviciosLocalStorage } from "./serviciosLocalStorage.js";
+
 
 export const crearProductoAdministrador = (imagenProducto, categoriaProducto, nombreProducto, precioProducto, descripcionProducto, id)=>{
    const producto = document.createElement("li");
    producto.classList.add("contenido__categoria__producto");
    const contenido = `
-      <img class="contenido__producto__img" src="${imagenProducto}">
+      <img class="contenido__producto__img" src="data:image/png;base64,${imagenProducto}">
       <button class="contenido__producto__boton contenido__producto__boton--trash" id="trashButton"><img src="assets/img/trash_icon.png"></button>
       <a href= "editarProducto.html?id=${id}"><button class="contenido__producto__boton contenido__producto__boton--edit" id="editButton"><img src="assets/img/edit_icon.png"></button></a>
       <h4 class="contenido__producto__titulo">${nombreProducto}</h4>
@@ -14,10 +16,9 @@ export const crearProductoAdministrador = (imagenProducto, categoriaProducto, no
    producto.innerHTML = contenido;
    const trashButton = producto.querySelector("#trashButton");
    trashButton.addEventListener("click", ()=>{
-      serviciosCRUD
-         .eliminarProducto(id)
-         .catch(err => alert("error crear producto administrador"));
+      serviciosLocalStorage.eliminarProducto(id);
+      mostrarProductosAdministrador();
    });
- 
+
    return producto;
 }

@@ -11,6 +11,6 @@ botonIniciarSesion.addEventListener("click", (evento)=>{
     if(administrador == emailIngresado && password == passwordIngresado){
         window.location.href = "./administrador.html";
     } else {
-        alert("Usuario o password incorrectos");
+        alert("Usuario o password incorrectos. E-mail: admin@alura.com  Constraseña: q1w2e3r4");
     }
 });
